@@ -79,9 +79,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.0;\n\nimport \"../Roles.sol\";\n\ncontract PauserRole {\n    using Roles for Roles.Role;\n\n    event PauserAdded(address indexed account);\n    event PauserRemoved(address indexed account);\n\n    Roles.Role private _pausers;\n\n    constructor () internal {\n        _addPauser(msg.sender);\n    }\n\n    modifier onlyPauser() {\n        require(isPauser(msg.sender));\n        _;\n    }\n\n    function isPauser(address account) public view returns (bool) {\n        return _pausers.has(account);\n    }\n\n    function addPauser(address account) public onlyPauser {\n        _addPauser(account);\n    }\n\n    function renouncePauser() public {\n        _removePauser(msg.sender);\n    }\n\n    function _addPauser(address account) internal {\n        _pausers.add(account);\n        emit PauserAdded(account);\n    }\n\n    function _removePauser(address account) internal {\n        _pausers.remove(account);\n        emit PauserRemoved(account);\n    }\n}\n",
-  "sourcePath": "D:\\Code\\enerZToken\\node_modules\\openzeppelin-solidity\\contracts\\access\\roles\\PauserRole.sol",
+  "sourcePath": "D:\\code\\enerZToken\\node_modules\\openzeppelin-solidity\\contracts\\access\\roles\\PauserRole.sol",
   "ast": {
-    "absolutePath": "/D/Code/enerZToken/node_modules/openzeppelin-solidity/contracts/access/roles/PauserRole.sol",
+    "absolutePath": "/D/code/enerZToken/node_modules/openzeppelin-solidity/contracts/access/roles/PauserRole.sol",
     "exportedSymbols": {
       "PauserRole": [
         386
@@ -102,7 +102,7 @@
         "src": "0:23:4"
       },
       {
-        "absolutePath": "/D/Code/enerZToken/node_modules/openzeppelin-solidity/contracts/access/Roles.sol",
+        "absolutePath": "/D/code/enerZToken/node_modules/openzeppelin-solidity/contracts/access/Roles.sol",
         "file": "../Roles.sol",
         "id": 286,
         "nodeType": "ImportDirective",
@@ -1281,7 +1281,7 @@
     "src": "0:940:4"
   },
   "legacyAST": {
-    "absolutePath": "/D/Code/enerZToken/node_modules/openzeppelin-solidity/contracts/access/roles/PauserRole.sol",
+    "absolutePath": "/D/code/enerZToken/node_modules/openzeppelin-solidity/contracts/access/roles/PauserRole.sol",
     "exportedSymbols": {
       "PauserRole": [
         386
@@ -1302,7 +1302,7 @@
         "src": "0:23:4"
       },
       {
-        "absolutePath": "/D/Code/enerZToken/node_modules/openzeppelin-solidity/contracts/access/Roles.sol",
+        "absolutePath": "/D/code/enerZToken/node_modules/openzeppelin-solidity/contracts/access/Roles.sol",
         "file": "../Roles.sol",
         "id": 286,
         "nodeType": "ImportDirective",
@@ -2486,7 +2486,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-02-06T18:49:53.270Z",
+  "updatedAt": "2019-02-07T09:04:13.963Z",
   "devdoc": {
     "methods": {}
   },
