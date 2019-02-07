@@ -1,0 +1,23 @@
+{
+  "name": "enerztoken",
+  "version": "1.0.0",
+  "description": "EnerZ Token",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "enerZ",
+    "blokZ"
+  ],
+  "author": "Selcuk AKTAS",
+  "license": "ISC",
+  "devDependencies": {
+    "openzeppelin-solidity": "^2.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "ganache-cli": "^6.3.0",
+    "truffle-hdwallet-provider": "^1.0.3"
+  }
+}
