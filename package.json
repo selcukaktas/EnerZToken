@@ -13,10 +13,13 @@
   "author": "Selcuk AKTAS",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-bignumber": "^3.0.0",
     "openzeppelin-solidity": "^2.1.2",
     "token-test-suite": "0.0.3"
   },
   "dependencies": {
+    "bignumber.js": "^8.0.2",
     "dotenv": "^6.2.0",
     "ganache-cli": "^6.3.0",
     "truffle": "^5.0.3",
