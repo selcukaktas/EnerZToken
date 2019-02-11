@@ -8,18 +8,18 @@ import "../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Pausabl
 
 contract EnerZToken is ERC20, ERC20Mintable, ERC20Burnable, ERC20Pausable, ERC20Detailed {
     constructor(
-        string memory _name, 
-        string memory _symbol, 
-        uint8 _decimals
-        //address[] memory minters
+    string memory _name, 
+    string memory _symbol, 
+    uint8 _decimals,
+    uint256  _initialSupply 
         ) 
         ERC20Burnable()
         ERC20Mintable()
         ERC20Pausable()
-        ERC20Detailed(_name, _symbol, _decimals)  
         ERC20()
+        ERC20Detailed(_name, _symbol, _decimals)  
         public
     {
-        
+        _mint(msg.sender, _initialSupply);
     }
 }
